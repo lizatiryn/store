@@ -1,0 +1,404 @@
+body {
+  background-color: #2e2e2e;
+  margin: 0;
+}
+
+#topbar {
+  position: fixed;
+  z-index: 2;
+  overflow: hidden;
+  background-color: #000000;
+  height: 80px;
+  width: 100%;
+  color: white;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.menu{
+  display: none;
+}
+
+
+#topbar input {
+  height: 40px;
+  font-size: 30px;
+  border-radius: 35px;
+  padding-left: 30px;
+}
+#topbar button {
+  font-size: 30px;
+  margin-left: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#topbar img {
+  width: 60px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+#topbar img:hover {
+  width: 70px;
+  right: 5px;
+}
+
+#store {
+  position: relative;
+  padding-top: 100px;
+  padding-left: 100px;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 18%);
+  gap: 100px;
+}
+
+.close {
+  color: white;
+  font: 3em bold;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+#menuOpened{
+  width: 70%;
+  height: 100%;
+  background-color: #000000;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.menu-elements{
+  align-content: center;
+  width: 100%;
+  height: 100px;
+  color: white;
+  font-size: 5rem;
+  border-bottom: white 0.02rem solid;
+  position: relative;
+  top: 20%;
+}
+
+#cartOpened {
+  position: fixed; /* Makes it appear relative to the viewport */
+  top: 100px;
+  left: 35%;
+  width: 700px; /* Covers the entire width of the viewport */
+  height: 70%; /* Covers the entire height of the viewport */
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 5; /* Ensures it's on top of all other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#products {
+  position: relative;
+
+  height: 60%;
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#bottomCart {
+  height: 17%;
+  width: 95%;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 40px;
+  align-content: center;
+  margin-left: 30px;
+}
+
+#bottomCart button {
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  width: 170px;
+  background-color: white;
+  cursor: pointer;
+}
+
+#bottomCart button:hover {
+  color: #516678;
+}
+
+#cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #00000021;
+  top: 0;
+  z-index: 2;
+}
+#back {
+  cursor: pointer;
+  position: absolute;
+  left: 15px;
+}
+
+.bot {
+  padding-top: 130px;
+  margin-bottom: 100px;
+  justify-content: center;
+  font-size: 35px;
+  color: white;
+  width: 100%;
+  gap: 30px;
+  display: flex;
+}
+.bot span {
+  cursor: pointer;
+}
+
+.cartElem {
+  overflow-y: hidden !important;
+  overflow-x: hidden;
+  height: 100px !important;
+  flex-shrink: 0;
+  width: 100%;
+  color: white;
+  border-bottom: 2px rgba(255, 255, 255, 0.454) solid;
+  font-size: 30px;
+  align-items: center;
+  display: grid !important;
+  grid-template-columns: 150px auto 50px;
+}
+
+.cartElem span {
+  margin-left: 30%;
+  cursor: pointer;
+}
+
+.cartElem img {
+  height: 70px;
+  margin-left: 30%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 300px;
+  height: 500px;
+  background-color: rgb(246, 246, 246);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.item:hover {
+  background-color: aliceblue;
+}
+.itemIMG {
+  width: 70%;
+}
+
+.itemNAME {
+  margin-top: 10%;
+  font-size: 2em;
+}
+
+.addToCartBTN {
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+  width: 50px;
+  border-radius: 10px;
+}
+.addToCartBTN:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.icon::before {
+  background-color: aliceblue;
+  width: 50px;
+  height: 50px;
+}
+.info {
+  font-size: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 505px;
+  align-items: center;
+  padding: 50px 0 0 30px;
+}
+.info img {
+  width: 500px;
+}
+
+.description {
+  position: absolute;
+  display: flex;
+  font-size: 50px;
+  width: 50%;
+  color: white;
+  top: 200px;
+  left: 700px;
+}
+
+.openpagebtn {
+  width: 300px;
+  font-size: 50px;
+  border-radius: 15px;
+}
+
+.search-results{
+  overflow-y: auto;
+  height: auto;
+  max-height: 500px;
+  width: 400px;
+  background-color: #516678a8;
+  position: fixed;
+  display: grid;
+  grid-row: inherit;
+}
+.searchElem{
+  cursor: pointer;
+  display: inline;
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  height: 80px;
+  border-bottom: #000000 2px solid;
+}
+h1{
+  color: white;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 30%;
+}
+@media (max-width: 1550px) {
+  #store {
+    grid-template-columns: repeat(3, 25%);
+  }
+}
+
+@media (max-width: 1400px) {
+  #store {
+    grid-template-columns: repeat(2, 35%);
+    padding-top: 70px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .item {
+    margin-top: 0px;
+  }
+
+  #topbar input, button{
+    display: none;
+  }
+  #topbar{
+    background-color: #00000000;
+  }
+  .menu{
+    display: inline;
+  }
+  .cart{
+    display: none;
+  }
+
+  #menuOpened input{
+    position: relative;
+    top: 15%;
+    width: 50%;
+    height: 3.5rem;
+    font-size: 3rem;
+    border-radius: 15px;
+    padding-left: 0.2rem;
+  }
+  #menuOpened button{
+    color: black;
+    width: 40%;
+    max-width: 17rem;
+    height: 3.5rem;
+    display: inline;
+    font-size: 2rem;
+    position: absolute;
+    right: 0rem;
+    top: 15%;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  #store {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    left: 0;
+  }
+
+
+  .item {
+    margin-top: 0px;
+  }
+  #topbar input, button{
+    display: none;
+  }
+  #topbar{
+    background-color: #00000000;
+  }
+  .menu{
+    display: inline;
+  }
+  .cart{
+    display: none;
+  }
+  #menuOpened{
+    width: 100%;
+  }
+  
+}
+
+@media (min-width: 1401px) {
+  #menuOpened{
+    display: none;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+*::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  outline: 1px solid rgb(255, 255, 255);
+}
+
+.search-results::-webkit-scrollbar {
+  width: 0.1em;
+}
